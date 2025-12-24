@@ -84,7 +84,7 @@ nav a {
 
 .card img {
     width: 100%;
-    max-width: 300px
+    max-height: 400px;
     object-fit: cover;
     display: block;
 }
@@ -116,3 +116,4 @@ nav a {
     line-height: 1.5;
 
 }
+
