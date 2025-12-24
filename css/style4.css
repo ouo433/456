@@ -84,6 +84,7 @@ nav a {
 
 .card img {
     width: 100%;
+    max-width: 300px
     object-fit: cover;
     display: block;
 }
