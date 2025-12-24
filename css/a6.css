@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+body {
+    background-color: #f5f2ee;
+    color: #333;
+}
+
+/* Header */
+/* Top Nav */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px;
+  backdrop-filter: blur(10px);
+  background-color: #5e353b;
+  color: #F2E0D2;
+  align-items: center;
+  position: relative; 
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+
+nav a {
+  margin-left: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #F2E0D2;
+}
+
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+/* 季節區塊 */
+.season {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 70vh;
+    padding: 50px 20px;
+    overflow: hidden;
+    color: #fff;
+}
+
+.season .season-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.season h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.season p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* 背景圖片 */
+.season-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 保持圖片比例並填滿容器 */
+    opacity: 0.4;
+    z-index: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* 加入過渡效果 */
+    transform-origin: center center; /* 讓圖片從中心點放大 */
+}
+
+/* 滑鼠懸停時圖片放大 */
+.season-img:hover {
+    transform: scale(1.1); /* 讓圖片放大 1.1 倍 */
+    opacity: 0.6; /* 調整透明度使其更清晰 */
+}
+
+
+/* 季節漸層 */
+.spring {
+    background: linear-gradient(to bottom right, #ffddb4de, #ffadad85);
+}
+.summer {
+    background: linear-gradient(to bottom right,  #d2e492e1,  #b8ffea);
+}
+.autumn {
+    background: linear-gradient(to bottom right, #ffa682e7, #3a17179a);
+}
+.winter {
+    background: linear-gradient(to bottom right,  #48cae4, #916ef1d5);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  background: linear-gradient(to bottom, #f5f2ee, #f4e2cb);;
+  color: #b22d2d;
+}
+.footer p{
+  color: #dec9af;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* 卡片容器 */
+.card-container {
+    padding: 60px 60px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap; /* 讓卡片在小螢幕上自動換行 */
+}
+
+/* 卡片 */
+.card {
+    width: 30%; /* 每個卡片占用 30% 的寬度 */
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    height: 500px; /* 拉長卡片的高度，讓它變成長方形 */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 讓內容居中 */
+    margin-bottom: 30px; /* 增加卡片下方的間距 */
+}
+
+/* 固定大小的正方形圖片 */
+.card img {
+    width: 300px; /* 設定圖片的寬度 */
+    height: 300px; /* 設定圖片的高度 */
+    object-fit: contain; /* 使圖片保持比例並完整顯示 */
+    margin-top: 20px; /* 上方間距 */
+}
+
+/* 卡片內文 */
+.card .info {
+    padding: 10px;
+    text-align: center;
+    flex-grow: 1; /* 讓內文部分佔滿剩餘空間 */
+}
+
+.card .info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card .info p {
+    font-size: 14px;
+    color: #777;
+}
+
+.card .tag {
+    display: inline-block;
+    background-color: #f1f1f1;
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: 12px;
+    color: #333;
+    border-radius: 5px;
+}
+
+/* 卡片懸停效果 */
+.card:hover {
+    transform: scale(1.05);
+}
+
+.tag {
+   display: inline-block;
+    background-color: #f1f1f1;
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: 12px;
+    color: #333;
+    border-radius: 5px;
+}
